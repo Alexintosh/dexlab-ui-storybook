@@ -3,17 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-native-scripts": "1.14.0",
-    "jest-expo": "~27.0.0",
-    "react-test-renderer": "16.3.1",
-    "@storybook/react-native": "^3.4.3",
     "@storybook/addon-actions": "^3.4.3",
     "@storybook/addon-links": "^3.4.3",
     "@storybook/addons": "^3.4.3",
+    "@storybook/react-native": "^3.4.3",
+    "@types/react": "^16.3.14",
+    "@types/react-native": "^0.55.12",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
+    "jest-expo": "~27.0.0",
+    "prop-types": "^15.6.1",
     "react-dom": "16.3.1",
-    "prop-types": "^15.6.1"
+    "react-native-scripts": "1.14.0",
+    "react-native-typescript-transformer": "^1.2.5",
+    "react-test-renderer": "16.3.1",
+    "typescript": "^2.8.3"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
@@ -22,7 +26,8 @@
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
     "test": "jest",
-    "storybook": "storybook start -p 7007"
+    "storybook-js": "storybook start -p 7007",
+    "storybook": "storybook --metro-config $PWD/rn-cli.config.js"
   },
   "jest": {
     "preset": "jest-expo"
